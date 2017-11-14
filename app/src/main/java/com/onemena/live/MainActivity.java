@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.onemena.live.video.VideoBean;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -114,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
     public void beiJingTV(View view) {
         Intent intent = new Intent(this, PlayActivity.class);
         intent.putExtra("url", "http://ivi.bupt.edu.cn/hls/btv1.m3u8");
-        //http://gslbserv.itv.cmvideo.cn/HDbjws.m3u8?authCode=07110409322147352675&stbId=006001FF0018120000060019F0D496A1&Contentid=8848252191536870228&mos=jbjhhzstsl&livemode=1&channel-id=wasusyt﻿
         intent.putExtra("name", "北京卫视直播");
+        intent.putExtra("video",new VideoBean().addValue("推荐HD","http://gslbserv.itv.cmvideo.cn/HDbjws.m3u8?authCode=07110409322147352675&stbId=006001FF0018120000060019F0D496A1&Contentid=8848252191536870228&mos=jbjhhzstsl&livemode=1&channel-id=wasusyt").addValue("标清","http://ivi.bupt.edu.cn/hls/btv1.m3u8"));
         startActivity(intent);
     }
 

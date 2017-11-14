@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.onemena.live.listener.OnTransitionListener;
 import com.onemena.live.model.SwitchVideoModel;
 import com.onemena.live.video.SampleVideo;
+import com.onemena.live.video.VideoBean;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 
@@ -52,7 +53,7 @@ public class PlayActivity extends AppCompatActivity {
 
     private void init() {
         String title = getIntent().getStringExtra("name");
-
+        VideoBean videoBean = (VideoBean) getIntent().getSerializableExtra("video");
         //String url = "http://7xse1z.com1.z0.glb.clouddn.com/1491813192";
         //需要路径的
         //videoPlayer.setUp(url, true, new File(FileUtils.getPath()), "");
