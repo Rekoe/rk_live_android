@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public void CCTV1(View view) {
         Intent intent = new Intent(this, PlayActivity.class);
         intent.putExtra("name", "CCTV1");
-        intent.putExtra("video", new VideoBean().addValue(ChannlType.HD.des, "http://183.251.61.207/PLTV/88888888/224/3221225812/index.m3u8"));
+        intent.putExtra("video", new VideoBean().addValue(ChannlType.Base.des, "http://ivi.bupt.edu.cn/hls/cctv1.m3u8").addValue(ChannlType.HD.des, "http://183.251.61.207/PLTV/88888888/224/3221225812/index.m3u8"));
 
         startActivity(intent);
     }
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     public void CCTV12(View view) {
         Intent intent = new Intent(this, PlayActivity.class);
         intent.putExtra("video", new VideoBean().addValue(ChannlType.HD.des, "http://ivi.bupt.edu.cn/hls/cctv12.m3u8"));
-        intent.putExtra("name", "CCTV12直播");
+        intent.putExtra("name", "CCTV12");
         startActivity(intent);
     }
 
