@@ -20,6 +20,7 @@ import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -58,17 +59,13 @@ public class PlayActivity extends AppCompatActivity {
         //需要路径的
         //videoPlayer.setUp(url, true, new File(FileUtils.getPath()), "");
 
-        String name = "普通";
-        SwitchVideoModel switchVideoModel = new SwitchVideoModel(name, getIntent().getStringExtra("url"));
-
-        String source2 = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f30.mp4";
-        String name2 = "清晰";
-        SwitchVideoModel switchVideoModel2 = new SwitchVideoModel(name2, source2);
-
         List<SwitchVideoModel> list = new ArrayList<>();
-        list.add(switchVideoModel);
-        list.add(switchVideoModel2);
-
+        for (Map video : videoBean.values()) {
+            String name = video.get("name").toString();
+            String url = video.get("url").toString();
+            SwitchVideoModel switchVideoModel = new SwitchVideoModel(name, url);
+            list.add(switchVideoModel);
+        }
         videoPlayer.setUp(list, true, title);
 
         //增加封面
