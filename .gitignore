@@ -1,3 +1,12 @@
 .idea
 .DS_Store
 .gradle/
+GSYVideoPlayer/GSYVideoPlayer.iml
+GSYVideoPlayer/app/app.iml
+GSYVideoPlayer/build/
+GSYVideoPlayer/local.properties
+.gitignore
+TVLive/TVLive.iml
+TVLive/TV_Live_Player/TV_Live_Player.iml
+
+
